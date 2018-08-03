@@ -23,24 +23,20 @@
   top: 3vw;
   right: 0;
   height: 10vh;
+  z-index: 5;
 }
 .menu {
   height: 40px;
   width: 40px;
   color: white;
-  font-size: 22px;
-  font-family: 'Abel';
   transition-duration: .35s;
   cursor: pointer;
   animation-delay: .15s;
-  z-index: 3;
 }
 .menu-close {
   display: none;
   height: 30px;
   width: 30px;
-}
-.menu-closing {
 }
 .menu:hover {
   transition-timing-function: ease;
@@ -58,13 +54,50 @@
   right: 0;
   width: 0%;
   height: 100%;
-  background-color: darkgray;
+  background: linear-gradient(to bottom right, #9b9b9b, #c6c6c6);
   transition: .5s;
   overflow: hidden;
   z-index: 2;
+}
+.navlist {
+  margin: 15vh 2vw 0 0;
+  list-style-type: none;
+  animation-delay: 3s;
+}
+.navlist li {
+  position: relative;
+  margin-bottom: 3vh;
+  font-size: 30px;
+  text-align: right;
+  font-family: 'Armata';
+}
+.navlist li a {
+  position: relative;
+  width: 100%;
+  padding: 5px;
+  overflow: hidden;
+  text-decoration: none;
+  color: white;
+  visibility: hidden;
+  transition: .5s;
+}
+.navlist li a:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-bottom: 3px solid white;
+  width: 0;
+}
+.navlist li a:hover:after {
+  width: 100%;
+  transition: .5s;
 }
 .open {
   width: 22%;
   opacity: 1;
   visibility: visible;
+}
+.oopen {
+  visibility: visible !important;
 }

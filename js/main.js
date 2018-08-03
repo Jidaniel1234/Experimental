@@ -118,4 +118,6 @@ const next = () => {
   counter = (counter + 1) % phrases.length
 }
 
-next()
+let Scrambler = new TextScramble();
+
+next();

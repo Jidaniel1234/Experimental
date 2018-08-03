@@ -1,17 +1,21 @@
 @import 'https://fonts.googleapis.com/css?family=Roboto+Mono:100'
-html, body
+html, body{
   font-family 'Roboto Mono', monospace
   background #212121
   height 100%
-.container
+  }
+.container{
   height 100%
   width 100%
   justify-content center
   align-items center
   display flex
-.text
+  }
+.text{
   font-weight 100
   font-size 28px
   color #FAFAFA
-.dud
+  }
+.dud{
   color #757575
+}

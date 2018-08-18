@@ -4,40 +4,31 @@ $(window).on("load", function() {
   //var vidpos = $('.video').offset().top - $(window).scrollTop();
 
   $('.menu-open').on("click", function() {
-    $('.navlist li a').addClass('oopen');
-    $('.navcover').addClass('open');
-    $('.front').addClass('darken');
-    $('.nav').find('img').toggle();
+    addNav();
+    marker = $(window).scrollTop();
+    //alert(marker);
+    max = marker + 100;
+    //alert(max);
+    if ($(window).scrollTop() > max) {
+      removeNav();
+    }
   });
-
-  $('.menu-close').on("click", function() {
-    $('.navlist li a').removeClass('oopen');
-    $('.navcover').removeClass('open');
-    $('.front').removeClass('darken');
-    $('.nav').find('img').toggle();
+  $('.menu-close, .pageon').on("click", function() {
+    removeNav();
   });
-
-  //$(window).on('scroll', function() {
-  //  if (winh * 2 / 5 < vidpos ) {
-  //    $('.video').play();
-  //  } else if (winh < vidpos) {
-  //    $('.video').pause();
-  //  } else {
-  //    $('.video').pause();
-  //  }
-  //});
-
-  var controller = new ScrollMagic.Controller();
-  new ScrollMagic.Scene({
-    triggerElement: "#parallax",
-    triggerHook: "onEnter",
-  })
-  .duration('300%')
-  .setTween("#parallax", {
-    backgroundPosition: "50% 100%",
-    ease: Linear.None
-  })
-  .addIndicators()
-  .addTo(controller);
 
 });
+
+var removeNav = function() {
+  $('.navlist li a').removeClass('oopen');
+  $('.navcover').removeClass('open');
+  $('.front').removeClass('darken');
+  $('.nav').find('img').toggle();
+}
+
+var addNav = function() {
+  $('.navlist li a').addClass('oopen');
+  $('.navcover').addClass('open');
+  $('.front').addClass('darken');
+  $('.nav').find('img').toggle();
+}

@@ -1,36 +1,11 @@
-body {
-  /*background: url("images/oh.jpg") 50% 0%;
-  background-size: cover;*/
-  margin: 0 !important;
-  background-color: #212121;
-}
-.setting1 {
-  position: fixed;
-  margin: 0;
-  top: 0;
-  right: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #212121;
-  z-index: -1;
-}
-.setting2 {
-  position: fixed;
-  margin: 0;
-  top: 0;
-  left: 0;
-  width: 50%;
-  height: 100%;
-  background-color: #212121;
-  z-index: -1;
-}
 .landing {
   display: inline-block;
   margin: 20vh 0 0 20vw;
 }
 .front {
   margin: 0;
-  background: url("images/ohr.jpg") 50% 0%;
+  background: url("images/melinda2.jpg") 50% 0%;
+  background-repeat: no-repeat;
   min-height: 100vh;
   padding-top: 5vh;
 }
@@ -46,18 +21,7 @@ body {
   margin: 0 0 0 0;
   font-size: 50px;
   font-family: 'Abel';
-}
-.a {
-  animation-delay: 1.1s;
-}
-.b {
-  animation-delay: 1.2s;
-}
-.c {
-  animation-delay: 1.3s;
-}
-.d {
-  animation-delay: 1.4s;
+  visibility: hidden;
 }
 .glitch {
   color: white;
@@ -65,14 +29,34 @@ body {
   position: relative;
   margin: 0 auto;
 }
-.video {
+.vid {
   margin: 0;
   width: 100%;
-  height: 100vh;
+  height: 100%;
 }
-video {
+/* for ;ater
+#pinContainer {
   width: 100%;
+  height: 100%;
+  overflow: hidden;
 }
+.panel {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+.blue {
+  background-color: #3477e2;
+}
+.turqoise {
+  background-color: #17d81b;
+}
+.green {
+  background-color: #ed3838;
+}
+.bordeaux {
+  background-color: white;
+} */
 @keyframes noise-anim {
   0% {
     clip: rect(39px, 9999px, 40px, 0);
@@ -149,6 +133,7 @@ video {
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim 2s 2 linear alternate-reverse;
+  animation-delay: 2.5s;
 }
 
 @keyframes noise-anim-2 {
@@ -227,4 +212,5 @@ video {
   overflow: hidden;
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s 1.333 linear alternate-reverse;
+  animation-delay: 2.5s;
 }

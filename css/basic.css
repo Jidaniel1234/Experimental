@@ -15,7 +15,7 @@
 body {
   /*background: url("images/oh.jpg") 50% 0%;
   background-size: cover;*/
-  margin: 0;
+  margin: !important 0;
   background-color: #212121;
 }
 .darken {

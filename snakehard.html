@@ -67,6 +67,14 @@ var snake = {
 };
 
 var count = 0;
+  
+var apple = {
+
+  x: 320,
+
+  y: 320
+
+};
 
 function getRandomInt(min, max) {
 
@@ -207,8 +215,6 @@ function loop() {
     // snake ate apple
 
     if (cell.x === apple.x && cell.y === apple.y) {
-
-      snake.maxCells++;
 
       apple.x = getRandomInt(0, 25) * grid;
 

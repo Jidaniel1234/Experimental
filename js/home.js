@@ -13,16 +13,27 @@ $(window).on("load", function() {
     origin: 'left',
   });
 
-  //$(window).on('scroll', function() {
-  //  if (winh * 2 / 5 < vidpos ) {
-  //    $('.video').play();
-  //  } else if (winh < vidpos) {
-  //    $('.video').pause();
-  //  } else {
-  //    $('.video').pause();
-  //  }
-  //});
+  ScrollReveal().reveal('video', {
+    delay: 2000,
+  });
 
+  $('body').on('DOMMouseScroll mousewheel', function (e) {
+    if(e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) { //alternative options for wheelData: wheelDeltaX & wheelDeltaY
+      //scroll down
+      console.log('Down');
+      $('.front').removeClass('animated slideInDown');
+      $('.front').addClass('animated slideOutUp');
+    } else {
+      //scroll up
+      console.log('Up');
+      $('.front').removeClass('animated slideOutUp');
+      $('.front').addClass('animated slideInDown');
+    }
+    //prevent page fom scrolling
+    return false;
+  });
+
+/*
   var controller = new ScrollMagic.Controller();
   new ScrollMagic.Scene({
     triggerElement: "#parallax",
@@ -45,7 +56,8 @@ $(window).on("load", function() {
     .setPin(slides[i])
     .addTo(controller);
   }
-/* for later
+
+  for later
   var wipeAnimation = new TimelineMax()
     .fromTo("section.panel.turgoise", 1, {x: "-100%"}, {x: "0%", ease: Linear.easeNone})
     .fromTo("section.panel.green", 1, {x: "100%"}, {x: "0%", ease: Linear.easeNone})

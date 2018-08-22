@@ -6,7 +6,7 @@
   position: absolute;
   top: 0;
   margin: 0;
-  background: url("images/deskbg5.jpg") 50% 70%;
+  background: url("images/deskbg5.jpg") 100% 70%;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -222,4 +222,9 @@ video {
   clip: rect(0, 900px, 0, 0);
   animation: noise-anim-2 3s 1.333 linear alternate-reverse;
   animation-delay: 2.5s;
+}
+@media only screen and (max-width: 520px) {
+    body {
+        background-color: lightblue;
+    }
 }

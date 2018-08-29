@@ -2,25 +2,27 @@
   display: inline-block;
   margin: 25vh 0 0 20vw;
 }
-.front {
+.panel {
   position: absolute;
   top: 0;
   margin: 0;
+  width: 100%;
+  height: 100%;
+  animation-delay: .2s;
+  animation-timing-function: cubic-bezier(1,-0.01,.57,1.01);
+  visibility: hidden;
+}
+.front {
   background: url("images/deskbg5.jpg") 100% 70%;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
-  z-index: 1;
-  animation-delay: .5s;
-  animation-timing-function: cubic-bezier(1,-0.01,.57,1.01);
-}
-.scroll {
-  top: -100% !important;
+  z-index: 12;
 }
 .title {
   margin: 0 0 5vh 0;
   font-size: 25px;
-  font-family: 'Titillium Web', 'POLYA Regular';
+  font-family: 'Titillium Web';
   animation-delay: .25s;
 }
 .motto {
@@ -36,36 +38,117 @@
   margin: 0 auto;
 }
 video {
-  margin: 0;
   width: 100%;
   height: 100%;
-  background-color: black;
-  z-index: 0;
-  visibility: hidden;
+  z-index: 11;
 }
-/* for ;ater
-#pinContainer {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
+/* 45-130 - code for viz*/
+.viz {
+  display: flex;
+  position: fixed;
+  background-color: #212121;
+  z-index: 11;
 }
-.panel {
+.viz .title {
+  font-family: 'Hansief';
+  font-size: 60px;
+}
+.viz p {
+  position: relative;
+  padding: 5px;
+  font-family: 'Clear Sans Light';
+}
+.viz p a {
+  color: inherit;
+  text-decoration: none;
+}
+.viz p a:after {
+  content: '';
   position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid black;
+  width: 0;
+}
+.viz p a:hover:after {
   width: 100%;
+  transition: .5s;
+}
+.subdiv1 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  margin: 0;
+  width: 50vw;
   height: 100%;
+  background-color: #E5E5E5;
 }
-.blue {
-  background-color: #3477e2;
+.subdiv1 .title {
+  position: relative;
+  bottom: 5vh;
+  font-size: 70px;
+  animation-delay: 0.8s;
 }
-.turqoise {
-  background-color: #17d81b;
+.subdiv1 p {
+  margin-bottom: 5vh;
 }
-.green {
-  background-color: #ed3838;
+.subdiv1 .sub {
+  font-size: 25px;
+  transition: .5s;
 }
-.bordeaux {
+.f {
+  animation-delay: 1.6s;
+}
+.s {
+  animation-delay: 1.8s;
+}
+.t {
+  animation-delay: 2.0s;
+}
+.o {
+  animation-delay: 2.2s;
+}
+.subdiv2 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 50%;
+  background-color: #00B6FF;
+}
+.subdiv2 .title {
+  animation-delay: .4s;
+}
+.subdiv3 {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 50vw;
+  height: 50%;
   background-color: white;
-} */
+}
+.subdiv3 .title {
+  animation-delay: 1.2s;
+}
+.A {
+  background-color: #3477e2;
+  z-index: 10;
+}
+.B {
+  background-color: #17d81b;
+  z-index: 9;
+}
+.C {
+  background-color: #ed3838;
+  z-index: 8;
+}
+.D {
+  background-color: #E5E5E5;
+  z-index: 7;
+}
 @keyframes noise-anim {
   0% {
     clip: rect(39px, 9999px, 40px, 0);

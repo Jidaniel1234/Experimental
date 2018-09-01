@@ -19,7 +19,7 @@
   width: 100%;
   z-index: 12;
 }
-.title {
+.landtitle {
   margin: 0 0 5vh 0;
   font-size: 25px;
   font-family: 'Titillium Web';
@@ -136,6 +136,17 @@ video {
 .A {
   background-color: #3477e2;
   z-index: 10;
+}
+.A1 {
+}
+.A2 {
+
+}
+.A3 {
+
+}
+.A4 {
+
 }
 .B {
   background-color: #17d81b;
@@ -306,8 +317,66 @@ video {
   animation: noise-anim-2 3s 1.333 linear alternate-reverse;
   animation-delay: 2.5s;
 }
-@media only screen and (max-width: 520px) {
-    body {
-        background-color: lightblue;
-    }
+/* Large devices (desktops, 992px and up) */
+@media (max-width: 1024px) {
+  /* do arrow positioning*/
+}
+/* Medium devices (tablets, 768px and up) */
+@media (max-width: 768px) {
+  .landtitle {
+    font-size: 25px;
+  }
+  .subdiv1 .title {
+    font-size: 50px;
+  }
+  .subdiv2 .title, .subdiv3 .title {
+    font-size: 40px;
+  }
+  /* do arrow positioning*/
+}
+/* Small devices (landscape phones, 420-576) */
+@media (max-width: 576px) {
+  .landtitle {
+    font-size: 20px;
+  }
+  .motto {
+    font-size: 40px;
+  }
+  .navcover h1 {
+    font-size: 18px;
+  }
+  .navcover p {
+    font-size: 14px;
+  }
+  .subdiv1 .title {
+    font-size: 30px;
+  }
+  .subdiv2 .title, .subdiv3 .title {
+    font-size: 25px;
+  }
+}
+/* Extra small devices (portrait phones, less than 420 px) */
+@media (max-width: 420px) {
+  .menu {
+    width: 30px;
+    height: 30px;
+  }
+  .landtitle {
+    font-size: 15px;
+  }
+  .motto {
+    font-size: 30px;
+  }
+  .navcover h1 {
+    font-size: 14px;
+  }
+  .navcover p {
+    font-size: 12px;
+  }
+  .subdiv1 .title {
+    font-size: 24px;
+  }
+  .subdiv2 .title, .subdiv3 .title {
+    font-size: 20px;
+  }
 }

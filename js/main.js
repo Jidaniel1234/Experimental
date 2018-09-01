@@ -3,6 +3,7 @@ var loading_screen = pleaseWait({
   backgroundColor: 'lightgrey',
   loadingHtml: "<div class='spinner'><div class='double-bounce1'></div><div class='double-bounce2'></div></div>"
 });
+var curslide;
 
 $(window).on("load", function() {
 
@@ -18,61 +19,71 @@ $(window).on("load", function() {
     $('.f1, .title-1').click(function() {
       $('.viz').removeClass('animated slideInRight');
       $('.viz').addClass('animated slideOutRight');
-      $('.menu-open').hide();
       $('.back').show();
+      curslide = 2;
     });
 
     $('.back').click(function() {
       $('.viz').removeClass('animated slideOutRight');
       $('.viz').addClass('animated slideInRight');
       $('.back').hide();
-      $('.menu-open').show();
       clear();
+      curslide = 1;
     });
 
     $('.s1, .title-2').click(function() {
-      $('.menu-open').hide();
       $('.A').hide();
       $('.viz').removeClass('animated slideInLeft');
       $('.viz').addClass('animated slideOutLeft');
       $('.forward').show();
+      curslide = 3;
     });
 
     $('.forward').click(function() {
       $('.viz').removeClass('animated slideOutLeft');
       $('.viz').addClass('animated slideInLeft');
       $('.forward').hide();
-      $('.menu-open').show();
       setTimeout(() => {$('.A').show();}, 1200);
       clear();
+      curslide = 1;
     });
 
     $('.t1, .title-3').click(() => {
-      $('.menu-open').hide();
       $('.A').hide();
       $('.B').hide();
       $('.viz').removeClass('animated slideInDown');
       $('.viz').addClass('animated slideOutUp');
       $('.up').show();
+      curslide = 4;
     });
 
     $('.up').click(() => {
       $('.viz').removeClass('animated slideOutUp');
       $('.viz').addClass('animated slideInDown');
       $('.up').hide();
-      $('.menu-open').show();
       setTimeout(() => {$('.A, .B').show();}, 1200);
       clear();
+      curslide = 1;
     });
 });
 function mopen() {
     $('.menu-open').on("click", function() {
       addNav();
+      });
+    $(document).keyup(function(e) {
+      if (e.keyCode === 27) {
+        removeNav();
+    }
     });
 }
 function mclose() {
     $('.menu-close').on("click", function() {
       removeNav();
+    });
+    $(document).keyup(function(e) {
+      if (e.keyCode === 77 || e.keyCode === 78 || e.keyCode === 79) {
+        addNav();
+      }
     });
 }
 function hide() {
@@ -88,9 +99,21 @@ function clear() {
 function removeNav() {
   $('.navcover').removeClass('open');
   $('.front').removeClass('darken');
-  $('.nav').find('img').toggle();
+  $('.menu-close').hide();
+  $('.menu-open').show();
   hide();
-  $('.back, .forward, .up').hide();
+  if (curslide === 1) {
+    $('.back, .forward, .up').hide();
+  } else if (curslide === 2) {
+    $('.forward, .up').hide();
+  } else if (curslide === 3) {
+    $('.back, .up').hide();
+  } else if (curslide === 4) {
+    $('.back, .forward').hide();
+  } else {
+    $('.back, .forward, .up').hide();
+  }
+  $('').hide();
   $('html, body').css({
       overflow: 'auto',
       height: 'auto'
@@ -100,7 +123,8 @@ function removeNav() {
 function addNav() {
   $('.navcover').addClass('open');
   $('.front').addClass('darken');
-  $('.nav').find('img').toggle();
+  $('.menu-open').hide();
+  $('.menu-close').show();
   $('.back, .forward, .up').hide();
   addSeq();
   $('html, body').css({

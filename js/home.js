@@ -1,5 +1,5 @@
 $(window).on("load", function() {
-  
+
   var prevpanel;
   var name;
   var j;
@@ -29,12 +29,6 @@ $(window).on("load", function() {
       console.log("scrolling down");
       $(this).removeClass('animated slideInDown');
       $(this).addClass('animated slideOutUp');
-    } else {
-      console.log("scrolling up");
-      if (this.className == 'panel viz') {
-        $('.front').removeClass('animated slideOutUp');
-        $('.front').addClass('animated slideInDown');
-      }
     }
   });
 
@@ -44,6 +38,37 @@ $(window).on("load", function() {
       $('.front').removeClass('animated slideOutUp');
       $('.front').addClass('animated slideInDown');
     }
+  });
+
+// mobile support
+
+  var ts;
+  $('.front').bind('touchstart', function(e) {
+      ts = e.originalEvent.touches[0].clientY;
+  });
+
+  $('.front').bind('touchmove', function(e) {
+      var te = e.originalEvent.changedTouches[0].clientY;
+      if (ts > te) {
+          console.log('down');
+          $(this).removeClass('animated slideInDown');
+          $(this).addClass('animated slideOutUp');
+      }
+  });
+
+  var tsv;
+  $('.viz').bind('touchstart', function(e) {
+      tsv = e.originalEvent.touches[0].clientY;
+  });
+
+  $('.viz').bind('touchmove', function(e) {
+      var tev = e.originalEvent.changedTouches[0].clientY;
+      if (tsv > tev) {
+      } else {
+          console.log('up');
+          $('.front').removeClass('animated slideOutUp');
+          $('.front').addClass('animated slideInDown');
+      }
   });
 });
 

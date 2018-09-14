@@ -294,7 +294,7 @@ video {
     width: 100vw;
   }
 }
-/* Large devices (desktops, 1024px and up) */
+/* Large devices (desktops, 768-1024) */
 @media (max-width: 1024px) {
   .nav {
     width: 95vw;
@@ -308,7 +308,7 @@ video {
     font-size: 45px;
   }
 }
-/* Medium devices (tablets, 768px and up) */
+/* Medium devices (tablets, 576-768) */
 @media (max-width: 768px) {
   .nav {
     width: 90vw;
@@ -316,6 +316,14 @@ video {
 
   .landtitle {
     font-size: 25px;
+  }
+
+  .navcover h1 {
+    font-size: 22px;
+  }
+
+  .navcover p {
+    font-size: 18px;
   }
 
   .subdiv1 .title {
@@ -332,12 +340,12 @@ video {
     width: 85vw;
   }
 
-  .landtitle {
+  .front .landing .landtitle {
     font-size: 20px;
   }
 
-  .motto {
-    font-size: 40px;
+  .front .landing .glitch {
+    font-size: 35px;
   }
 
   .navcover h1 {
@@ -356,7 +364,6 @@ video {
     font-size: 25px;
   }
 }
-/* Extra small devices (portrait phones, less than 420 px) */
 @media (max-width: 420px) {
   .nav {
     width: 80vw;
@@ -367,11 +374,11 @@ video {
     height: 30px;
   }
 
-  .landtitle {
+  .front .landing .landtitle {
     font-size: 15px;
   }
 
-  .motto {
+  .front .landing .glitch {
     font-size: 30px;
   }
 
@@ -392,4 +399,4 @@ video {
   }
 }
 
-/*# sourceMappingURL=home1.css.map */
+/*# sourceMappingURL=home.css.map */

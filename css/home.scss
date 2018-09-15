@@ -132,8 +132,15 @@ video {
   }
 }
 .A {
+  display: flex;
+  justify-content: center;
   background-color: #3477e2;
   z-index: 10;
+  .left {
+    .title {
+      text-align: center;
+    }
+  }
 }
 .A1 {
 

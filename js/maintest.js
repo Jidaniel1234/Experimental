@@ -223,7 +223,7 @@ $(document).keydown(function(e) {
     if (e.keyCode in map) {
         map[e.keyCode] = true;
         if (map[66] && map[67] && map[84]) {
-            alert("I wish you the best endeavors in your future!");
+            window.location.href = "http://wolf-corp.github.io/Revolution";
         }
     }
 }).keyup(function(e) {

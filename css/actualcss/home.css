@@ -4,91 +4,93 @@
   margin: 0;
   width: 100%;
   height: 100%;
-  animation-delay: .2s;
-  animation-timing-function: cubic-bezier(1,-0.01,.57,1.01);
+  animation-delay: 0.2s;
+  animation-timing-function: cubic-bezier(1, -0.01, 0.57, 1.01);
   visibility: hidden;
-  overflow-x: hidden;
 }
+
 .front {
   background: url("../images/deskbg5.jpg") 100% 70%;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
   z-index: 12;
-  .landing {
-    display: inline-block;
-    margin: 25vh 0 0 20vw;
-    .motto {
-      margin: 0 0 0 0;
-      font-size: 50px;
-      font-family: 'Abel';
-      visibility: hidden;
-    }
-    .glitch {
-      color: black;
-      font-size: 50px;
-      position: relative;
-      margin: 0 auto;
-      &:after {
-        content: attr(data-text);
-        position: absolute;
-        left: 2px;
-        text-shadow: -1px 0 red;
-        top: 0;
-        color: black;
-        background: white;
-        overflow: hidden;
-        clip: rect(0, 900px, 0, 0);
-        animation: noise-anim 2s 2 linear alternate-reverse;
-        animation-delay: 2.5s;
-      }
-
-    }
-    .landtitle {
-      margin: 0 0 5vh 0;
-      font-size: 25px;
-      font-family: 'Titillium Web';
-      animation-delay: .25s;
-    }
-  }
 }
+.front .landing {
+  display: inline-block;
+  margin: 25vh 0 0 20vw;
+}
+.front .landing .motto {
+  margin: 0 0 0 0;
+  font-size: 50px;
+  font-family: "Abel";
+  visibility: hidden;
+}
+.front .landing .glitch {
+  color: black;
+  font-size: 50px;
+  position: relative;
+  margin: 0 auto;
+}
+.front .landing .glitch:after {
+  content: attr(data-text);
+  position: absolute;
+  left: 2px;
+  text-shadow: -1px 0 red;
+  top: 0;
+  color: black;
+  background: white;
+  overflow: hidden;
+  clip: rect(0, 900px, 0, 0);
+  animation: noise-anim 2s 2 linear alternate-reverse;
+  animation-delay: 2.5s;
+}
+.front .landing .landtitle {
+  margin: 0 0 5vh 0;
+  font-size: 25px;
+  font-family: "Titillium Web";
+  animation-delay: 0.25s;
+}
+
 video {
   width: 100%;
   height: 100%;
   z-index: 11;
 }
+
 /* 45-130 - code for viz*/
 .viz {
   display: flex;
   position: fixed;
   background-color: #212121;
   z-index: 11;
-  .title {
-    font-family: 'Hansief';
-    font-size: 60px;
-  }
-  p {
-    position: relative;
-    padding: 5px;
-    font-family: 'Clear Sans Light';
-  }
-  p a {
-    color: inherit;
-    text-decoration: none;
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      border-bottom: 3px solid black;
-      width: 0;
-    }
-    &:hover:after {
-      width: 100%;
-      transition: .5s;
-    }
-  }
 }
+.viz .title {
+  font-family: "Hansief";
+  font-size: 60px;
+}
+.viz p {
+  position: relative;
+  padding: 5px;
+  font-family: "Clear Sans Light";
+}
+.viz p a {
+  color: inherit;
+  text-decoration: none;
+}
+.viz p a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-bottom: 3px solid black;
+  width: 0;
+}
+.viz p a:hover:after {
+  width: 100%;
+  transition: 0.5s;
+}
+
 .subdiv1 {
   display: flex;
   justify-content: center;
@@ -98,16 +100,17 @@ video {
   width: 50vw;
   height: 100%;
   background-color: #E5E5E5;
-  .title {
-    position: relative;
-    bottom: 5vh;
-    font-size: 70px;
-    animation-delay: 0.8s;
-  }
-  p {
-    margin-bottom: 5vh;
-  }
 }
+.subdiv1 .title {
+  position: relative;
+  bottom: 5vh;
+  font-size: 70px;
+  animation-delay: 0.8s;
+}
+.subdiv1 p {
+  margin-bottom: 5vh;
+}
+
 .subdiv2 {
   margin: 0;
   display: flex;
@@ -116,10 +119,11 @@ video {
   width: 50vw;
   height: 50%;
   background-color: #00B6FF;
-  .title {
-    animation-delay: .4s;
-  }
 }
+.subdiv2 .title {
+  animation-delay: 0.4s;
+}
+
 .subdiv3 {
   margin: 0;
   display: flex;
@@ -128,59 +132,60 @@ video {
   width: 50vw;
   height: 50%;
   background-color: white;
-  .title {
-    animation-delay: 1.2s;
-  }
 }
+.subdiv3 .title {
+  animation-delay: 1.2s;
+}
+
 .A {
   display: flex;
   justify-content: left;
   align-items: center;
   background-color: #3477e2;
   z-index: 10;
-  .left {
-    background-image: url("../images/deskbg4.jpg");
-    background-position: 50% 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100%;
-    width: 100%;
-    .title {
-      width: 50%;
-      color: #3477e2;
-      text-align: center;
-      font-family: 'Hansief';
-      font-size: 100px;
-    }
-  }
 }
+.A .left {
+  background-image: url("../images/deskbg4.jpg");
+  background-position: 50% 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.A .left .title {
+  width: 50%;
+  color: #3477e2;
+  text-align: center;
+  font-family: "Hansief";
+  font-size: 100px;
+}
+
 .A1 {
   background-color: dodgerblue;
   z-index: 9;
 }
+
 .A2 {
   background-color: #2f5da8;
   z-index: 8;
 }
-.A3 {
 
-}
-.A4 {
-
-}
 .B {
   background-color: #17d81b;
   z-index: 9;
 }
+
 .C {
   background-color: #ed3838;
   z-index: 8;
 }
+
 .D {
   background-color: #E5E5E5;
   z-index: 7;
 }
+
 @keyframes noise-anim {
   0% {
     clip: rect(39px, 9999px, 40px, 0);
@@ -246,7 +251,6 @@ video {
     clip: rect(87px, 9999px, 2px, 0);
   }
 }
-
 @keyframes noise-anim-2 {
   0% {
     clip: rect(29px, 9999px, 88px, 0);
@@ -324,9 +328,11 @@ video {
   .nav {
     width: 95vw;
   }
+
   .subdiv1 .title {
     font-size: 50px;
   }
+
   .subdiv2 .title, .subdiv3 .title {
     font-size: 45px;
   }
@@ -336,18 +342,23 @@ video {
   .nav {
     width: 90vw;
   }
+
   .landtitle {
     font-size: 25px;
   }
+
   .navcover h1 {
     font-size: 22px;
   }
+
   .navcover p {
     font-size: 18px;
   }
+
   .subdiv1 .title {
     font-size: 40px;
   }
+
   .subdiv2 .title, .subdiv3 .title {
     font-size: 35px;
   }
@@ -357,21 +368,27 @@ video {
   .nav {
     width: 85vw;
   }
+
   .front .landing .landtitle {
     font-size: 20px;
   }
+
   .front .landing .glitch {
     font-size: 35px;
   }
+
   .navcover h1 {
     font-size: 18px;
   }
+
   .navcover p {
     font-size: 14px;
   }
+
   .subdiv1 .title {
     font-size: 30px;
   }
+
   .subdiv2 .title, .subdiv3 .title {
     font-size: 25px;
   }
@@ -380,26 +397,35 @@ video {
   .nav {
     width: 80vw;
   }
+
   .menu {
     width: 30px;
     height: 30px;
   }
+
   .front .landing .landtitle {
     font-size: 15px;
   }
-  .front .landing .glitch  {
+
+  .front .landing .glitch {
     font-size: 30px;
   }
+
   .navcover h1 {
     font-size: 14px;
   }
+
   .navcover p {
     font-size: 12px;
   }
+
   .subdiv1 .title {
     font-size: 24px;
   }
+
   .subdiv2 .title, .subdiv3 .title {
     font-size: 20px;
   }
 }
+
+/*# sourceMappingURL=home.css.map */

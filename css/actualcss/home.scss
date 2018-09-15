@@ -10,7 +10,7 @@
 }
 
 .front {
-  background: url("images/deskbg5.jpg") 100% 70%;
+  background: url("../images/deskbg5.jpg") 100% 70%;
   background-repeat: no-repeat;
   height: 100%;
   width: 100%;
@@ -145,19 +145,24 @@ video {
   z-index: 10;
 }
 .A .left {
-  background-image: url("images/deskbg3.jpg");
-  background-position: 0% 0%;
+  background-image: url("../images/deskbg4.jpg");
+  background-position: 50% 50%;
   display: flex;
   align-items: center;
   justify-content: center;
   height: 100%;
-  width: 50%;
+  width: 100%;
 }
-.A .title {
+.A .left .title {
   width: 50%;
+  color: #3477e2;
   text-align: center;
-  font-family: 'Hansief';
-  font-size: 60px
+  font-family: "Hansief";
+  font-size: 100px;
+}
+
+.A1 {
+  background-color: black;
 }
 
 .B {
@@ -417,4 +422,4 @@ video {
   }
 }
 
-/*# sourceMappingURL=home.css.map */
+/*# sourceMappingURL=home.scss.map */

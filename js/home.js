@@ -24,21 +24,12 @@ $(window).on("load", function() {
     delay: 1000
   });
 
-  $('.front').on('DOMMouseScroll mousewheel', function (e) {
-    if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
-      console.log("scrolling down");
-      $(this).removeClass('animated slideInDown');
-      $(this).addClass('animated slideOutUp');
-    }
-  });
-
-  $('.viz').on('DOMMouseScroll mousewheel', function (e) {
-    if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
-      console.log("scrolling up");
-      $('.front').removeClass('animated slideOutUp');
-      $('.front').addClass('animated slideInDown');
-    }
-  });
+  panelScrollDown('.front', 'slideInDown', 'slideOutUp');
+  panelScrollUp('.viz', '.front', 'slideOutUp', 'slideInDown');
+  panelScrollDown('.A', 'slideInDown', 'slideOutUp');
+  panelScrollUp('.A1', '.A', 'slideOutUp', 'slideInDown');
+  panelScrollDown('.A1', 'slideInRight', 'slideOutRight');
+  panelScrollUp('.A2', '.A1', 'slideOutRight', 'slideInRight');
 
 // mobile support
 
@@ -72,4 +63,21 @@ $(window).on("load", function() {
   });
 });
 
-  //slidedown nav close and open stuff
+function panelScrollDown(panel, animationForward, animationBack) {
+  $(panel).on('DOMMouseScroll mousewheel', function (e) {
+    if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
+      console.log("scrolling down");
+      $(this).removeClass(`animated ${animationForward}`);
+      $(this).addClass(`animated ${animationBack}`);
+    }
+  });
+}
+function panelScrollUp(panel, effectedPanel, animationForward, animationBack) {
+  $(panel).on('DOMMouseScroll mousewheel', function (e) {
+    if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
+      console.log("scrolling up");
+      $(effectedPanel).removeClass(`animated ${animationForward}`);
+      $(effectedPanel).addClass(`animated ${animationBack}`);
+    }
+  });
+}

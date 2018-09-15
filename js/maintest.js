@@ -80,7 +80,7 @@ function removeNav() {
 
 // for OurTeam
 function showOurTeam() {
-  $('.A').show();
+  $('.A, .A1, .A2, .A3, .A4').show();
   $('.B').hide();
   $('.C').hide();
   $('.viz').removeClass('animated slideInRight');
@@ -90,7 +90,7 @@ function showOurTeam() {
 }
 function hideOurTeam() {
   clear();
-  setTimeout(() => {$('.A').hide(); clear();}, 1200);
+  setTimeout(() => {$('.A, .A1, .A2, .A3, .A4').hide(); clear();}, 1200);
   $('.B').hide();
   $('.C').hide();
   $('.viz').removeClass('animated slideOutRight');
@@ -105,7 +105,7 @@ function clearA() {
 // for OurRobot
 function showOurRobot() {
   $('.B').show();
-  $('.A').hide();
+  $('.A, .A1, .A2, .A3, .A4').hide();
   $('.C').hide();
   $('.viz').removeClass('animated slideInLeft');
   $('.viz').addClass('animated slideOutLeft');
@@ -115,7 +115,7 @@ function showOurRobot() {
 function hideOurRobot() {
   clear();
   setTimeout(() => {$('.B').hide(); clear();}, 1200);
-  $('.A').hide();
+  $('.A, .A1, .A2, .A3, .A4').hide();
   $('.C').hide();
   $('.viz').removeClass('animated slideOutLeft');
   $('.viz').addClass('animated slideInLeft');
@@ -129,7 +129,7 @@ function clearB() {
 // for Awards
 function showAwards() {
   $('.C').show();
-  $('.A').hide();
+  $('.A, .A1, .A2, .A3, .A4').hide();
   $('.B').hide();
   $('.viz').removeClass('animated slideInDown');
   $('.viz').addClass('animated slideOutUp');
@@ -139,7 +139,7 @@ function showAwards() {
 function hideAwards() {
   clear();
   setTimeout(() => {$('.C').hide(); clear();}, 1200);
-  $('.A').hide();
+  $('.A, .A1, .A2, .A3, .A4').hide();
   $('.B').hide();
   $('.viz').removeClass('animated slideOutUp');
   $('.viz').addClass('animated slideInDown');

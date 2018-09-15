@@ -2,7 +2,7 @@
 // 2017 Countdown JS
 // ========================== //
 
-var countdown = new Date("January 1,0");
+var countdown = new Date("November 18, 2018");
 
 function getRemainingTime(endtime) {
   var milliseconds = Date.parse(endtime) - Date.parse(new Date());

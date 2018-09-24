@@ -24,12 +24,31 @@ $(window).on("load", function() {
     delay: 1000
   });
 
-  panelScrollDown('.front', 'slideInDown', 'slideOutUp');
-  panelScrollUp('.viz', '.front', 'slideOutUp', 'slideInDown');
-  panelScrollDown('.A', 'slideInDown', 'slideOutUp');
-  panelScrollUp('.A1', '.A', 'slideOutUp', 'slideInDown');
-  panelScrollDown('.A1', 'slideInRight', 'slideOutRight');
-  panelScrollUp('.A2', '.A1', 'slideOutRight', 'slideInRight');
+  //for landing
+  panelScrollDownManual('.front', 'slideInDown', 'slideOutUp');
+  panelScrollUpManual('.viz', '.front', 'slideOutUp', 'slideInDown');
+
+  //for OurTeam
+  panelScrollDownManual('.A', 'slideInDown', 'slideOutUp');
+  panelScrollUpManual('.A1', '.A', 'slideOutUp', 'slideInDown');
+  panelScrollDownManual('.A1', 'slideInRight', 'slideOutRight');
+  panelScrollUpManual('.A2', '.A1', 'slideOutRight', 'slideInRight');
+  panelScrollDownManual('.A2', 'slideInLeft', 'slideOutLeft');
+  panelScrollUpManual('.A3', '.A2', 'slideOutLeft', 'slideInLeft');
+  panelScrollDownManual('.A3', 'zoomIn', 'zoomOut');
+  panelScrollUpManual('.A4', '.A3', 'zoomOut', 'zoomIn');
+  panelScrollDownManual('.A4', 'fadeIn', 'fadeOut');
+  panelScrollUpManual('.A5', '.A4', 'fadeOut', 'fadeIn');
+
+  //for OurRobot
+  panelScrollDownManual('.B', 'slideInDown', 'slideOutUp');
+  panelScrollUpManual('.B1', '.B', 'slideOutUp', 'slideInDown');
+  panelScrollDownManual('.B1', 'slideInRight', 'slideOutRight');
+  panelScrollUpManual('.B2', '.B1', 'slideOutRight', 'slideInRight');
+  panelScrollDownManual('.B2', 'slideInLeft', 'slideOutLeft');
+  panelScrollUpManual('.B3', '.B2', 'slideOutLeft', 'slideInLeft');
+
+  //awards scroll up is similar to the up arrow click, so on the other file
 
 // mobile support
 
@@ -63,21 +82,67 @@ $(window).on("load", function() {
   });
 });
 
-function panelScrollDown(panel, animationForward, animationBack) {
+function panelScrollDownManual(panel, animationForward, animationBack) {
   $(panel).on('DOMMouseScroll mousewheel', function (e) {
     if (e.originalEvent.detail > 0 || e.originalEvent.wheelDelta < 0) {
       console.log("scrolling down");
       $(this).removeClass(`animated ${animationForward}`);
       $(this).addClass(`animated ${animationBack}`);
+      if (panel == '.A1' || panel == '.A3' || panel == '.A4' || panel == '.B1') {
+        setTimeout(function () {
+          $(panel).css({
+            width: 0
+          });
+        }, 1200);
+      }
     }
   });
+  var ts;
+  $(panel).bind('touchstart', function(e) {
+      ts = e.originalEvent.touches[0].clientY;
+  });
+  $(panel).bind('touchmove', function(e) {
+      var te = e.originalEvent.changedTouches[0].clientY;
+      if (ts > te) {
+        console.log("scrolling down");
+        $(this).removeClass(`animated ${animationForward}`);
+        $(this).addClass(`animated ${animationBack}`);
+        if (panel == '.A1' || panel == '.A3' || panel == '.A4' || panel == '.B1') {
+          setTimeout(function () {
+            $(panel).css({
+              width: 0
+            });
+          }, 1200);
+        }
+      }
+  });
 }
-function panelScrollUp(panel, effectedPanel, animationForward, animationBack) {
+function panelScrollUpManual(panel, effectedPanel, animationForward, animationBack) {
   $(panel).on('DOMMouseScroll mousewheel', function (e) {
     if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0) {
       console.log("scrolling up");
       $(effectedPanel).removeClass(`animated ${animationForward}`);
       $(effectedPanel).addClass(`animated ${animationBack}`);
+      $(effectedPanel).css({
+        width: '100%',
+      });
     }
+  });
+
+  var tsv;
+  $(panel).bind('touchstart', function(e) {
+      tsv = e.originalEvent.touches[0].clientY;
+  });
+
+  $(panel).bind('touchmove', function(e) {
+      var tev = e.originalEvent.changedTouches[0].clientY;
+      if (tsv < tev) {
+        console.log("scrolling up");
+        $(effectedPanel).removeClass(`animated ${animationForward}`);
+        $(effectedPanel).addClass(`animated ${animationBack}`);
+        $(effectedPanel).css({
+          width: '100%',
+        });
+      }
   });
 }

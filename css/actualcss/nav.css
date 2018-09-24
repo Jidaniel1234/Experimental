@@ -191,6 +191,18 @@ a {
 .navcover .ncright .title-5 {
   margin-top: 1%;
 }
+.navcover .ncmid {
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.navcover .ncmid .title-m {
+  width: 0px;
+  position: fixed;
+  left: 49.5%;
+}
 
 .open {
   height: 100%;

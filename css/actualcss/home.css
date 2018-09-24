@@ -46,10 +46,13 @@
   animation-delay: 2.5s;
 }
 .front .landing .landtitle {
-  margin: 0 0 5vh 0;
+  margin: 0 0 2vh 0;
   font-size: 25px;
   font-family: "Titillium Web";
   animation-delay: 0.25s;
+}
+.front .landing .landtitle img {
+  width: 25px;
 }
 
 video {
@@ -171,19 +174,66 @@ video {
   z-index: 8;
 }
 
+.A3 {
+  background-color: #632fa8;
+  z-index: 7;
+}
+
+.A4 {
+  background-color: #a82f79;
+  z-index: 6;
+}
+
+.A5 {
+  background-color: #3ed6ce;
+  z-index: 5;
+}
+
 .B {
-  background-color: #17d81b;
+  background-color: #b2ffc9;
   z-index: 9;
+}
+
+.B1 {
+  background-color: #17d81b;
+  z-index: 8;
+}
+
+.B2 {
+  background-color: #347c4a;
+  z-index: 7;
+}
+
+.B3 {
+  background-color: #6c876c;
+  z-index: 6;
 }
 
 .C {
   background-color: #ed3838;
-  z-index: 8;
+  z-index: 5;
 }
 
 .D {
-  background-color: #E5E5E5;
-  z-index: 7;
+  background-color: #006aff;
+  z-index: 4;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.D .talk {
+  cursor: pointer;
+}
+
+.E {
+  background-color: #1500a3;
+  z-index: 3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.E .sponsor {
+  cursor: pointer;
 }
 
 @keyframes noise-anim {

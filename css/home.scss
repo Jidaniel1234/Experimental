@@ -7,7 +7,6 @@
   animation-delay: .2s;
   animation-timing-function: cubic-bezier(1,-0.01,.57,1.01);
   visibility: hidden;
-  overflow-x: hidden;
 }
 .front {
   background: url("../images/deskbg5.jpg") 100% 70%;
@@ -45,10 +44,13 @@
 
     }
     .landtitle {
-      margin: 0 0 5vh 0;
+      margin: 0 0 2vh 0;
       font-size: 25px;
       font-family: 'Titillium Web';
       animation-delay: .25s;
+      img {
+        width: 25px;
+      }
     }
   }
 }
@@ -155,31 +157,57 @@ video {
     }
   }
 }
+@mixin layer($color, $level) {
+  background-color: $color;
+  z-index: $level;
+}
 .A1 {
-  background-color: dodgerblue;
-  z-index: 9;
+  @include layer(dodgerblue, 9);
 }
 .A2 {
-  background-color: #2f5da8;
-  z-index: 8;
+  @include layer(#2f5da8, 8);
 }
 .A3 {
-
+  @include layer(#632fa8, 7);
 }
 .A4 {
-
+  @include layer(#a82f79, 6);
+}
+.A5 {
+  @include layer(#3ed6ce, 5);
 }
 .B {
-  background-color: #17d81b;
-  z-index: 9;
+  @include layer(#b2ffc9, 9);
+}
+.B1 {
+  @include layer(#17d81b, 8);
+}
+.B2 {
+  @include layer(#347c4a, 7);
+}
+.B3 {
+  @include layer(#6c876c, 6);
 }
 .C {
-  background-color: #ed3838;
-  z-index: 8;
+  @include layer(#ed3838, 5);
 }
 .D {
-  background-color: #E5E5E5;
-  z-index: 7;
+  @include layer(#006aff, 4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .talk {
+    cursor: pointer;
+  }
+}
+.E {
+  @include layer(#1500a3, 3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .sponsor {
+    cursor: pointer;
+  }
 }
 @keyframes noise-anim {
   0% {

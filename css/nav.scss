@@ -62,7 +62,7 @@ body {
   /*background: url("images/oh.jpg") 50% 0%;
   background-size: cover;*/
   margin: !important 0;
-  background-color: #212121;
+  background-color: lightgrey;
   & > .inner {
     display: none;
   }
@@ -101,14 +101,17 @@ a {
     }
   }
   .up {
+    display: none;
     position: relative;
     left: -44%;
   }
   .forward {
+    display: none;
     position: relative;
     left: -90%;
   }
   .back {
+    display: none;
     position: relative;
     left: -90%;
   }
@@ -120,6 +123,9 @@ a {
       width: 35px;
       height: 35px;
     }
+  }
+  .menu-open {
+    display: none;
   }
 }
 .navcover {

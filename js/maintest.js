@@ -1,3 +1,6 @@
+$('.back').hide();
+$('.forward').hide();
+$('.up').hide();
 // During the page load, we use this filler
 var loading_screen = pleaseWait({
   logo: "css/images/wolf-logo-min.png",
@@ -10,8 +13,8 @@ $(window).on("load", function() {
 
   // removes loading screen
   loading_screen.finish();
-  hideArrows();
 
+  $('.menu-open').show();
   $(window).click(() => {
     console.log($('.viz').attr('class'));
   });
@@ -36,7 +39,7 @@ function panelScrollDownAuto(panel, animationForward, animationBack) {
   $(panel).removeClass(`animated ${animationForward}`);
   $(panel).addClass(`animated ${animationBack}`);
   if (panel == '.A1' || panel == '.A3' || panel == '.A4' || panel =='.B1') {
-    setTimeout(function () {
+    setTimeout(function() {
       $(panel).css({
         width: 0
       });

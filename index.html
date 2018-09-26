@@ -3,9 +3,7 @@
 <head>
   <!-- Latest compiled and minified CSS -->
   <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
-  <link href="https://fonts.googleapis.com/css?family=Abel|Rajdhani:500" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Titillium+Web" rel="stylesheet">
-  <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Abel|Titillium+Web|Source+Sans+Pro:700" rel="stylesheet">
   <link rel="icon" href="css/images/icon2t.png" type="image/png">
   <link rel="stylesheet" href="css/actualcss/nav.css" type="text/css">
   <link rel="stylesheet" href="css/actualcss/home.css" type="text/css">
@@ -15,51 +13,55 @@
   <title>Wolf Corp. Robotics</title>
 </head>
 
-<body style="margin: 0;">
+<body style="margin: 0;" ng-app="myApp">
 
-  <div class="animated navcover">
-    <div class="ncleft">
-      <h1 class="title-1"><a href="#">O U R &nbsp;&nbsp;T E A M</a></h1>
-      <p class="sub-1"><a href="#">Where We're Headed</a></p>
-      <p class="sub-2"><a href="#">Programming</a></p>
-      <p class="sub-3"><a href="#">Building</a></p>
-      <p class="sub-4"><a href="#">Business</a></p>
-      <p class="sub-5"><a href="#">Community</a></p>
+  <div ng-controller="landingAndTwoNavs">
+    <div class="animated navcover">
+      <div class="ncleft">
+        <h1 class="title-1"><a href="#">O U R &nbsp;&nbsp;T E A M</a></h1>
+        <p class="sub-1"><a href="#">Where We're Headed</a></p>
+        <p class="sub-2"><a href="#">Programming</a></p>
+        <p class="sub-3"><a href="#">Building</a></p>
+        <p class="sub-4"><a href="#">Business</a></p>
+        <p class="sub-5"><a href="#">Community</a></p>
+      </div>
+      <div class="ncmid">
+        <h1 class="title-m"><a href="#">H O M E</a></h1>
+      </div>
+      <div class="ncright">
+        <h1 class="title-2"><a href="#">T H E &nbsp;&nbsp;R O B O T</a></h1>
+        <p class="sub-1"><a href="#">The Structure</a></p>
+        <p class="sub-2"><a href="#">It's Brains</a></p>
+        <p class="sub-3"><a href="#">The Competition</a></p>
+        <h1 class="title-3"><a href="#">A W A R D S</a></h1>
+        <h1 class="title-4"><a href="#">L E T ' S &nbsp;&nbsp; T A L K !</a></h1>
+        <h1 class="title-5"><a href="#">S P O N S O R S</h1>
+      </div>
     </div>
-    <div class="ncmid">
-      <h1 class="title-m"><a href="#">H O M E</a></h1>
+
+    <div class="nav">
+      <img class="animated fadeInRight menu back" src="css/images/backward.png"></img>
+      <img class="animated fadeInRight menu forward" src="css/images/forward.png"></img>
+      <img class="animated fadeInRight menu up" src="css/images/up.png"></img>
+      <img class="animated fadeInRight menu menu-open" src="css/images/menu.png"></img>
+      <img class="animated fadeInRight menu menu-close" src="css/images/close.png"></img>
     </div>
-    <div class="ncright">
-      <h1 class="title-2"><a href="#">T H E &nbsp;&nbsp;R O B O T</a></h1>
-      <p class="sub-1"><a href="#">The Structure</a></p>
-      <p class="sub-2"><a href="#">It's Brains</a></p>
-      <p class="sub-3"><a href="#">The Competition</a></p>
-      <h1 class="title-3"><a href="#">A W A R D S</a></h1>
-      <h1 class="title-4"><a href="#">L E T ' S &nbsp;&nbsp; T A L K !</a></h1>
-      <h1 class="title-5"><a href="#">S P O N S O R S</h1>
+
+    <div class="front panel" id="front">
+      <div class="landing">
+        <h1 class="animated fadeIn landtitle">
+          {{ landingSmallTitle }}
+        </h1>
+        <p class="motto glitch" data-text="O O O G A B O O G A">W H E R E</p>
+        <p class="motto glitch" data-text="I N S P I R A T I O N">I N S P I R A T I O N</p>
+        <p class="motto glitch" data-text="C R O S S E S">C R O S S E S</p>
+        <p class="motto glitch" data-text="C O O P E R T I T I O N">C O O P E R T I T I O N</p>
+      </div>
+
     </div>
   </div>
 
-  <div class="nav">
-    <img class="animated fadeInRight menu back" src="css/images/backward.png"></img>
-    <img class="animated fadeInRight menu forward" src="css/images/forward.png"></img>
-    <img class="animated fadeInRight menu up" src="css/images/up.png"></img>
-    <img class="animated fadeInRight menu menu-open" src="css/images/menu.png"></img>
-    <img class="animated fadeInRight menu menu-close" src="css/images/close.png"></img>
-  </div>
 
-  <div class="front panel" id="front">
-    <div class="landing">
-      <h1 class="animated fadeIn landtitle">
-        Wolf Corp.
-      </h1>
-      <p class="motto glitch" data-text="O O O G A B O O G A">W H E R E</p>
-      <p class="motto glitch" data-text="I N S P I R A T I O N">I N S P I R A T I O N</p>
-      <p class="motto glitch" data-text="C R O S S E S">C R O S S E S</p>
-      <p class="motto glitch" data-text="C O O P E R T I T I O N">C O O P E R T I T I O N</p>
-    </div>
-
-  </div>
   <!-- make background an actual picture-->
   <div class="panel notimed viz">
     <div class="subdiv1">
@@ -74,6 +76,8 @@
       </div>
     </div>
   </div>
+
+
   <!-- <video class="panel viz" controls><source class="video" src="css/videos/fillvid.mp4" type="video/mp4"></video> -->
   <div class="panel notimed A">
     <div class="left">
@@ -96,8 +100,9 @@
   <div class="panel notimed E">
     <img class="animated fadeInRight sponsor" src="css/images/close.png"></img>
   </div>
-  -->
+  
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.4/angular.min.js"></script>
 <script src="js/please-wait.min.js"></script>
 <!--
 <script src="https://cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/ScrollMagic.min.js"></script>
@@ -108,6 +113,8 @@
 <script src="https://unpkg.com/scrollreveal@4"></script>
 <script src="js/maintest.js"></script>
 <script src="js/home.js"></script>
+<script src="js/modules.js"></script>
+<script src="js/controllers/landingAndTwoNavs.js"></script>
 <script src="js/node.js"></script>
 <!-- Latest compiled and minified JavaScript -->
 <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->

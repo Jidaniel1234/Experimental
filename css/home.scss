@@ -63,7 +63,7 @@ video {
 .viz {
   display: flex;
   position: fixed;
-  background-color: #212121;
+  background-color: lightgrey;
   z-index: 11;
   .title {
     font-family: 'Hansief';
@@ -134,12 +134,15 @@ video {
     animation-delay: 1.2s;
   }
 }
+@mixin layer($color, $level) {
+  background-color: $color;
+  z-index: $level;
+}
 .A {
   display: flex;
   justify-content: left;
   align-items: center;
-  background-color: #3477e2;
-  z-index: 10;
+  @include layer(#3477e2, 10);
   .left {
     background-image: url("../images/deskbg4.jpg");
     background-position: 50% 50%;
@@ -156,10 +159,6 @@ video {
       font-size: 100px;
     }
   }
-}
-@mixin layer($color, $level) {
-  background-color: $color;
-  z-index: $level;
 }
 .A1 {
   @include layer(dodgerblue, 9);

@@ -71,7 +71,7 @@ body {
   /*background: url("images/oh.jpg") 50% 0%;
   background-size: cover;*/
   margin: !important 0;
-  background-color: #212121;
+  background-color: lightgrey;
 }
 body > .inner {
   display: none;
@@ -114,14 +114,17 @@ a {
   height: 45px;
 }
 .nav .up {
+  display: none;
   position: relative;
   left: -44%;
 }
 .nav .forward {
+  display: none;
   position: relative;
   left: -90%;
 }
 .nav .back {
+  display: none;
   position: relative;
   left: -90%;
 }
@@ -133,6 +136,9 @@ a {
 .nav .menu-close:hover {
   width: 35px;
   height: 35px;
+}
+.nav .menu-open {
+  display: none;
 }
 
 .navcover {

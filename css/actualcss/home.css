@@ -65,7 +65,7 @@ video {
 .viz {
   display: flex;
   position: fixed;
-  background-color: #212121;
+  background-color: lightgrey;
   z-index: 11;
 }
 .viz .title {

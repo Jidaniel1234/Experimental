@@ -1,0 +1,14 @@
+@mixin layer($gradient1, $gradient2, $level, $direction: to right) {
+  background-image: linear-gradient($direction, $gradient1, $gradient2);
+  z-index: $level;
+
+  .maintext {
+    z-index: $level + 1;
+  }
+}
+@mixin title($color, $size: 100px) {
+  text-align: center;
+  font-family: 'Hansief';
+  font-size: $size;
+  color: $color;
+}

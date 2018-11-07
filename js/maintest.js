@@ -8,7 +8,6 @@ var loading_screen = pleaseWait({
   loadingHtml: "<div class='spinner'><div class='double-bounce1'></div><div class='double-bounce2'></div></div>"
 });
 var currslide = 0;
-
 $(window).on("load", function() {
 
   // removes loading screen
@@ -468,6 +467,7 @@ $(document).keydown(function(e) {
     if (e.keyCode in map) {
         map[e.keyCode] = true;
         if (map[66] && map[67] && map[84]) {
+            alert("Hello");
             window.location.href = "http://wolf-corp.github.io/Revolution";
         }
     }

@@ -1,15 +1,11 @@
+
 $(window).on("load", function() {
 
-  var prevpanel;
-  var name;
-  var j;
-  var panels = ['front', 'viz', 'A', 'B', 'C', 'D'];
-  var marker = 0;
-  const height = $(window).height();
-  const scrollTop = $(window).scrollTop();
+  var loadTime = window.performance.timing.domInteractive - window.performance.timing.navigationStart;
+  console.log(loadTime);
 
   ScrollReveal().reveal('.motto', {
-    delay: 1500,
+    delay: loadTime,
     duration: 800,
     interval: 150,
     easing: 'ease-out',
@@ -22,6 +18,9 @@ $(window).on("load", function() {
   });
   ScrollReveal().reveal('.notimed', {
     delay: 1000
+  });
+  ScrollReveal().reveal('.iconArea', {
+    delay: loadTime + 7000
   });
 
   //for landing
@@ -91,7 +90,7 @@ function panelScrollDownManual(panel, animationForward, animationBack) {
       if (panel == '.A1' || panel == '.A3' || panel == '.A4' || panel == '.B1') {
         setTimeout(function () {
           $(panel).css({
-            width: 0
+            'width': 0,
           });
         }, 1200);
       }
@@ -110,7 +109,7 @@ function panelScrollDownManual(panel, animationForward, animationBack) {
         if (panel == '.A1' || panel == '.A3' || panel == '.A4' || panel == '.B1') {
           setTimeout(function () {
             $(panel).css({
-              width: 0
+              'width': 'auto',
             });
           }, 1200);
         }

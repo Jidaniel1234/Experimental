@@ -34,10 +34,10 @@ $(window).on("load", function() {
   panelScrollUpManual('.A2', '.A1', 'slideOutRight', 'slideInRight');
   panelScrollDownManual('.A2', 'slideInLeft', 'slideOutLeft');
   panelScrollUpManual('.A3', '.A2', 'slideOutLeft', 'slideInLeft');
-  panelScrollDownManual('.A3', 'zoomIn', 'zoomOut');
-  panelScrollUpManual('.A4', '.A3', 'zoomOut', 'zoomIn');
-  panelScrollDownManual('.A4', 'fadeIn', 'fadeOut');
-  panelScrollUpManual('.A5', '.A4', 'fadeOut', 'fadeIn');
+  panelScrollDownManual('.A3', 'slideInRight', 'slideOutRight');
+  panelScrollUpManual('.A4', '.A3', 'slideOutRight', 'slideInRight');
+  panelScrollDownManual('.A4', 'slideInLeft', 'slideOutLeft');
+  panelScrollUpManual('.A5', '.A4', 'slideOutLeft', 'slideInLeft');
 
   //for OurRobot
   panelScrollDownManual('.B', 'slideInDown', 'slideOutUp');

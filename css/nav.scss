@@ -49,15 +49,8 @@
     transform: rotate(0deg);
   }
 }
+@import "neatstuff";
 /* Actual code */
-@font-face {
-  font-family: 'Hansief';
-  src: url('../fonts/Hansief.otf');
-}
-@font-face {
-  font-family: 'Clear Sans Light';
-  src: url('../fonts/ClearSans-Light.ttf');
-}
 body {
   /*background: url("images/oh.jpg") 50% 0%;
   background-size: cover;*/

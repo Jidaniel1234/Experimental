@@ -19,8 +19,9 @@
   align-items: center;
   @include layer(black, black, 10);
   .left {
-    background-image: url("../images/deskbg4.jpg");
-    background-position: 50% 50%;
+    background-image: url("../images/calendar.jpg");
+    background-position: left top;
+    background-size: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -30,7 +31,7 @@
 
     .title {
       width: 60%;
-      @include title(#3477e2);
+      @include title(#358cdd);
     }
   }
 }
@@ -43,12 +44,12 @@
     flex-direction: column;
     align-items: center;
     width: 50vw;
-    background-image: linear-gradient(to right, dodgerblue, #1ec3ff);
+    background-image: linear-gradient(to right, #085aab, #1483ab);
     .title {
       margin: 0 0 0 0;
       padding-top: 12vh;
       font-size: 50px;
-      font-family: 'Source Sans Pro';
+      font-family: 'Hansief';
       text-align: center;
       color: white;
 
@@ -61,12 +62,12 @@
       height: 5px;
       background-color: white;
       border: none;
-      animation: bounceasdf 2s;
+      animation: bounceasdf1 2s;
       animation-timing-function: linear;
       animation-direction: alternate;
       animation-iteration-count: infinite;
     }
-    @keyframes bounceasdf {
+    @keyframes bounceasdf1 {
       0% { transform: translate3d(-200px, 0px, 0); width: 0px;}
       50% { transform: translate3d(0px, 0, 0); width: 175px;}
       100% { transform: translate3d(205px, 0, 0); width: 0px; }
@@ -75,7 +76,7 @@
   .ticker {
     position: relative;
     top: 0;
-    border-right: 7vw solid #1e90ff;
+    border-right: 7vw solid #085bab;
     border-bottom: 7vw solid transparent;
     border-top: 7vw solid transparent;
     width: 0;
@@ -84,7 +85,7 @@
     margin: 5vh 5vw 0 0;
     color: white;
     font-size: 20px;
-    font-family: 'Abel';
+    font-family: 'Titillium Web';
   }
 }
 .A2 {
@@ -101,7 +102,7 @@
       margin: 0 0 0 0;
       padding-top: 12vh;
       font-size: 50px;
-      font-family: 'Source Sans Pro';
+      font-family: 'Hansief';
       text-align: center;
       color: white;
       .delay {
@@ -113,12 +114,12 @@
       height: 5px;
       background-color: white;
       border: none;
-      animation: bounceasdf 2s;
+      animation: bounceasdf1 2s;
       animation-timing-function: linear;
       animation-direction: alternate;
       animation-iteration-count: infinite;
     }
-    @keyframes bounceasdf {
+    @keyframes bounceasdf1 {
       0% { transform: translate3d(-220px, 0px, 0); width: 0px;}
       50% { transform: translate3d(0px, 0, 0); width: 175px;}
       100% { transform: translate3d(225px, 0, 0); width: 0px; }
@@ -169,7 +170,7 @@
     margin: 5vh 5vw 0 5vw;
     color: white;
     font-size: 20px;
-    font-family: 'Abel';
+    font-family: 'Titillium Web';
   }
 }
 .A3 {
@@ -186,7 +187,7 @@
       margin: 0 0 0 0;
       padding-top: 12vh;
       font-size: 50px;
-      font-family: 'Source Sans Pro';
+      font-family: 'Hansief';
       text-align: center;
       color: white;
       .delay {
@@ -198,12 +199,12 @@
       height: 5px;
       background-color: white;
       border: none;
-      animation: bounceasdf 2s;
+      animation: bounceasdf1 2s;
       animation-timing-function: linear;
       animation-direction: alternate;
       animation-iteration-count: infinite;
     }
-    @keyframes bounceasdf {
+    @keyframes bounceasdf1 {
       0% { transform: translate3d(-220px, 0px, 0); width: 0px;}
       50% { transform: translate3d(0px, 0, 0); width: 175px;}
       100% { transform: translate3d(225px, 0, 0); width: 0px; }
@@ -254,7 +255,7 @@
     margin: 5vh 5vw 0 5vw;
     color: white;
     font-size: 20px;
-    font-family: 'Abel';
+    font-family: 'Titillium Web';
   }
 }
 .A4 {
@@ -271,7 +272,7 @@
       margin: 0 0 0 0;
       padding-top: 12vh;
       font-size: 50px;
-      font-family: 'Source Sans Pro';
+      font-family: 'Hansief';
       text-align: center;
       color: white;
       .delay {
@@ -283,12 +284,12 @@
       height: 5px;
       background-color: white;
       border: none;
-      animation: bounceasdf 2s;
+      animation: bounceasdf1 2s;
       animation-timing-function: linear;
       animation-direction: alternate;
       animation-iteration-count: infinite;
     }
-    @keyframes bounceasdf {
+    @keyframes bounceasdf1 {
       0% { transform: translate3d(-220px, 0px, 0); width: 0px;}
       50% { transform: translate3d(0px, 0, 0); width: 175px;}
       100% { transform: translate3d(225px, 0, 0); width: 0px; }
@@ -329,7 +330,7 @@
     margin: 5vh 5vw 0 5vw;
     color: white;
     font-size: 20px;
-    font-family: 'Abel';
+    font-family: 'Titillium Web';
   }
 }
 .A5 {
@@ -347,7 +348,7 @@
       margin: 0 0 0 0;
       padding-top: 12vh;
       font-size: 50px;
-      font-family: 'Source Sans Pro';
+      font-family: 'Hansief';
       text-align: center;
       color: white;
       .delay {
@@ -359,12 +360,12 @@
       height: 5px;
       background-color: white;
       border: none;
-      animation: bounceasdf 2s;
+      animation: bounceasdf1 2s;
       animation-timing-function: linear;
       animation-direction: alternate;
       animation-iteration-count: infinite;
     }
-    @keyframes bounceasdf {
+    @keyframes bounceasdf1 {
       0% { transform: translate3d(-220px, 0px, 0); width: 0px;}
       50% { transform: translate3d(0px, 0, 0); width: 175px;}
       100% { transform: translate3d(225px, 0, 0); width: 0px; }
@@ -405,7 +406,7 @@
     margin: 5vh 5vw 0 5vw;
     color: white;
     font-size: 20px;
-    font-family: 'Abel';
+    font-family: 'Titillium Web';
   }
 }
 .panel {
@@ -416,9 +417,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  height: 80vh;
+  background-image: url('../images/rulerpencil.jpg');
+  background-position: center;
+  background-size: cover;
   padding-bottom: 20vh;
-  height: 80vh !important;
-  @include layer(#40e571, #b2ffc9, 9);
+  z-index: 9;
 
   .title {
     @include title(white);
@@ -428,30 +432,253 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include layer(#00af03, #17d81b, 8);
+  @include layer(#34a3ed, #34a3ed, 8);
 
   .title {
     @include title(white);
+    margin-bottom: 0;
+  }
+  .line {
+    width: 250px;
+    height: 5px;
+    background-color: white;
+    border: none;
+    animation: bounceasdf 2.5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  @keyframes bounceasdf {
+    0% { transform: translate3d(-280px, 0px, 0); width: 125px;}
+    50% { transform: translate3d(0px, 0, 0); width: 0px;}
+    100% { transform: translate3d(290px, 0, 0); width: 125px; }
+  }
+  .sections {
+    $sameHorizMargin: 23vw;
+    $sameVertMargin: 5vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    height: 80vh;
+    width: 100vw;
+
+    .topleft, .topright, .botleft, .botright {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      border: 5px solid white;
+      width: 24vw;
+      height: 30vh;
+      transition: 1s;
+
+      button {
+        padding: .5vh .5vw;
+        border: none;
+        border-radius: 5%;
+        background-color: white;
+        color: #43c2db;
+        font-size: 20px;
+        font-family: 'Titillium Web';
+        transition: 1s;
+        cursor: pointer;
+        opacity: 0;
+
+        &:hover {
+          color: #056375;
+        }
+      }
+      .infolabel {
+        color: white;
+        font-family: 'Titillium Web';
+        font-size: 20px;
+        opacity: 0;
+      }
+
+      &:hover {
+        .infolabel {
+          opacity: 1;
+        }
+        button {
+          opacity: 1;
+        }
+      }
+    }
+    .topleft {
+      @include fourSectionPos(topleft, $sameVertMargin, $sameHorizMargin);
+    }
+    .topright {
+      @include fourSectionPos(topright, $sameVertMargin, $sameHorizMargin);
+    }
+    .botleft {
+      @include fourSectionPos(botleft, $sameVertMargin, $sameHorizMargin);
+    }
+    .botright {
+      @include fourSectionPos(botright, $sameVertMargin, $sameHorizMargin);
+    }
   }
 }
 .B2 {
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include layer(#18562b, #347c4a, 7);
+  @include layer(#65dbf2, #65dbf2, 7);
 
   .title {
     @include title(white);
+    margin-bottom: 0;
+  }
+  .line {
+    width: 250px;
+    height: 5px;
+    background-color: white;
+    border: none;
+    animation: bounceasdf 2.5s;
+    animation-timing-function: linear;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+  }
+  @keyframes bounceasdf {
+    0% { transform: translate3d(-280px, 0px, 0); width: 125px;}
+    50% { transform: translate3d(0px, 0, 0); width: 0px;}
+    100% { transform: translate3d(290px, 0, 0); width: 125px; }
+  }
+  .sections {
+    $sameHorizMargin: 10vw;
+    $sameVertMargin: 5vh;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    height: 80vh;
+    width: 100vw;
+
+    .topleft, .topright, .botleft, .botright, .botmid, .topmid {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      box-sizing: border-box;
+      border: 5px solid white;
+      width: 24vw;
+      height: 30vh;
+      transition: 1s;
+
+      button {
+        padding: .5vh .5vw;
+        border: none;
+        border-radius: 5%;
+        background-color: white;
+        color: #43c2db;
+        font-size: 20px;
+        font-family: 'Titillium Web';
+        transition: 1s;
+        cursor: pointer;
+        opacity: 0;
+
+        &:hover {
+          color: #056375;
+        }
+      }
+      .infolabel {
+        color: white;
+        font-family: 'Titillium Web';
+        font-size: 20px;
+        opacity: 0;
+      }
+
+      &:hover {
+        .infolabel {
+          opacity: 1;
+        }
+        button {
+          opacity: 1;
+        }
+      }
+    }
+    .topleft {
+      @include fourSectionPos(topleft, $sameVertMargin, $sameHorizMargin);
+    }
+    .topright {
+      @include fourSectionPos(topright, $sameVertMargin, $sameHorizMargin);
+    }
+    .botleft {
+      @include fourSectionPos(botleft, $sameVertMargin, $sameHorizMargin);
+    }
+    .botright {
+      @include fourSectionPos(botright, $sameVertMargin, $sameHorizMargin);
+    }
+    .topmid {
+      @include fourSectionPos(topmid, $sameVertMargin, 24vw);
+    }
+    .botmid {
+      @include fourSectionPos(botmid, $sameVertMargin, 24vw);
+    }
   }
 }
 .B3 {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  @include layer(#6c876c, #508450, 6);
+  display: inline-flex;
+  @include layer(black, black, 6);
 
   .title {
-    @include title(white);
+    @include title(white, 50px);
+    margin-bottom: 2vh;
+  }
+  .subtitle {
+    margin-bottom: 2vh;
+    font-size: 35px;
+    font-family: 'Hansief';
+    color: white;
+    text-align: center;
+  }
+  .left, .right, .imgmiddle {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 33.33vw;
+    height: 100vh;
+
+    .line {
+      width: 175px;
+      height: 5px;
+      background-color: white;
+      border: none;
+      animation: bounceasdfb3 6s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      @keyframes bounceasdfb3 {
+        0% { transform: translate3d(-220px, 0px, 0); width: 0px; opacity: 1;}
+        16% { transform: translate3d(0px, 0, 0); width: 175px; opacity: 1;}
+        33% { transform: translate3d(225px, 0, 0); width: 0px; opacity: 1;}
+        34% { transform: translate3d(225px, 0, 0); width: 0px; opacity: 0;}
+        100% { transform: translate3d(225px, 0, 0); width: 0px; opacity: 0;}
+      }
+    }
+  }
+  .imgmiddle {
+    background: #d3dee2;
+
+    .line {
+      animation-delay: 2s;
+    }
+  }
+  .left {
+    padding-top: 8vh;
+    background: #42bff4;
+
+    .line {
+    }
+  }
+  .right {
+    padding-top: 8vh;
+    background: #1e7fff;
+    .line {
+      animation-delay: 4s;
+    }
   }
 }
 .C {

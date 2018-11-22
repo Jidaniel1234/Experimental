@@ -1,3 +1,11 @@
+@font-face {
+  font-family: 'Hansief';
+  src: url('../fonts/Hansief.otf');
+}
+@font-face {
+  font-family: 'Clear Sans Light';
+  src: url('../fonts/ClearSans-Light.ttf');
+}
 @mixin layer($gradient1, $gradient2, $level, $direction: to right) {
   background-image: linear-gradient($direction, $gradient1, $gradient2);
   z-index: $level;
@@ -6,9 +14,47 @@
     z-index: $level + 1;
   }
 }
-@mixin title($color, $size: 100px) {
+@mixin title($color, $size: 80px) {
   text-align: center;
   font-family: 'Hansief';
   font-size: $size;
   color: $color;
+}
+@mixin fourSectionPos($position, $verticalMargin, $horizMargin) {
+  position: absolute;
+
+  @if $position == topleft {
+    top: 0;
+    left: 0;
+    margin-top: $verticalMargin;
+    margin-left: $horizMargin;
+  } @else if $position == topright {
+    top: 0;
+    right: 0;
+    margin-top: $verticalMargin;
+    margin-right: $horizMargin;
+  } @else if $position == botleft {
+    bottom: 0;
+    left: 0;
+    margin-bottom: $verticalMargin;
+    margin-left: $horizMargin;
+  } @else if $position == botright {
+    bottom: 0;
+    right: 0;
+    margin-bottom: $verticalMargin;
+    margin-right: $horizMargin;
+  }
+  // for topmid and botmid, horizMargin becomes width in order to horizontally
+  @else if $position == topmid {
+    top: 0;
+    margin-top: $verticalMargin;
+    margin-left: (100vw - $horizMargin) / 2;
+    margin-right: (100vw - $horizMargin) / 2;
+  }
+  @else if $position == botmid {
+    bottom: 0;
+    margin-bottom: $verticalMargin;
+    margin-left: (100vw - $horizMargin) / 2;
+    margin-right: (100vw - $horizMargin) / 2;
+  }
 }

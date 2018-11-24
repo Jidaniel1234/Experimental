@@ -58,3 +58,9 @@
     margin-right: (100vw - $horizMargin) / 2;
   }
 }
+@mixin intervalAnimationDelay($nth-child, $interval: .25s) {
+  :nth-child(#{$nth-child}) {
+    animation-delay: $nth-child * $interval - .25s;
+    animation-duration: .75s;
+  }
+}

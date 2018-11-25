@@ -422,6 +422,7 @@ $('.up').click(() => {
 });
 $('.C').on('DOMMouseScroll mousewheel', function (e) {
   if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0 && pageshown == true) {
+    $('.viz').show();
     hideAwards();
     pageshown = false;
   }

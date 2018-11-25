@@ -166,6 +166,38 @@ $(window).on("load", function() {
   dropdownManipulator.handleChoice(3, '.right', 'Deposit System', 'g');
   dropdownManipulator.handleChoice(4, '.right', 'Hanging', 'h');
 
+  $('.panel').hover(function () {
+    let classed = this.className;
+    console.log(classed);
+
+    if (classed.search('B') > 0 || classed.search('D d') > 0 || classed.search('E e') > 0  || classed.search('A a') > 0 || classed.search('A5') > 0 || classed.search('C c') > 0) {
+      $('.nav .menu-open').addClass('invertedColors');
+      $('.nav .back').addClass('invertedColors');
+    } else if (classed.search('A1') > 0 || classed.search('A3') > 0) {
+      $('.nav .menu-open').addClass('invertedColors');
+      $('.nav .back').removeClass('invertedColors');
+    } else if (classed.search('A2') > 0 || classed.search('A4') > 0) {
+      $('.nav .menu-open').removeClass('invertedColors');
+      $('.nav .back').addClass('invertedColors');
+    } else {
+      $('.nav .menu-open').removeClass('invertedColors');
+      $('.nav .back').removeClass('invertedColors');
+    }
+
+    if (classed.search('C c') > 0) {
+      $('.C').attr('id', 'particles-js');
+      $('.D').removeAttr('particles-js');
+      $('.E').removeAttr('particles-js');
+    } else if (classed.search('D d') > 0) {
+      $('.D').attr('id', 'particles-js');
+      $('.C').removeAttr('particles-js');
+      $('.E').removeAttr('particles-js');
+    } else if (classed.search('E e') > 0) {
+      $('.E').attr('id', 'particles-js');
+      $('.D').removeAttr('particles-js');
+      $('.C').removeAttr('particles-js');
+    }
+  });
 });
 
 let dropdownleftopen = false;

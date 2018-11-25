@@ -31,7 +31,7 @@
 
     .title {
       width: 60%;
-      @include title(#358cdd);
+      @include title(#ffffff);
     }
   }
 }
@@ -732,7 +732,7 @@
     }
   }
   .middle {
-    background: #ced2d3;
+    background: #959c9d;
 
     .line {
       animation-delay: 2s;
@@ -863,9 +863,15 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  @include layer(#680000, #ed3838, 5);
+  @include layer(#005a9b, #005a9b, 5);
 
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .title {
+    margin: 15vh 0 0 0;
     @include title(white);
   }
 }
@@ -876,11 +882,18 @@
   align-items: center;
   justify-content: center;
 
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .title {
     @include title(white);
   }
   .talk {
+    filter: invert(1);
     cursor: pointer;
+    z-index: 1000;
   }
 }
 .E {
@@ -890,10 +903,17 @@
   align-items: center;
   justify-content: center;
 
+  canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   .title {
     @include title(white);
   }
   .sponsor {
+    filter: invert(1);
     cursor: pointer;
+    z-index: 1000;
   }
 }

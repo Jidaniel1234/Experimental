@@ -199,3 +199,6 @@ a {
   opacity: 1 !important;
   visibility: visible !important;
 }
+.invertedColors {
+  filter: invert(1) !important;
+}

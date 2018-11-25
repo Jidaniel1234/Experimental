@@ -400,6 +400,7 @@ $('.ncright .sub-3').click(() => {
 });
 
 //our awards event handlers
+var pageshown = false;
 $('.title-3').click(() => {
   clearA();
   clearB();
@@ -409,20 +410,21 @@ $('.title-3').click(() => {
   autoScrollFromLanding();
   removeNav();
   showAwards();
+  pageshown = true;
 });
 $('.t1').click(() => {
   showAwards();
-  var pageshown = true;
-  $('.C').on('DOMMouseScroll mousewheel', function (e) {
-    if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0 && pageshown === true) {
-      hideAwards();
-      pageshown = false;
-    }
-  });
+  pageshown = true;
 });
 $('.up').click(() => {
   hideAwards();
   pageshown = false;
+});
+$('.C').on('DOMMouseScroll mousewheel', function (e) {
+  if (e.originalEvent.detail < 0 || e.originalEvent.wheelDelta > 0 && pageshown == true) {
+    hideAwards();
+    pageshown = false;
+  }
 });
 
 //for lets talk

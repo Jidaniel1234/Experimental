@@ -7,22 +7,28 @@ $(window).on("load", function() {
   const panelMaker = new panelAndDefaults();
   const secEditor = new sectionMan();
   const dropdownManipulator = new dropdownMan('.B3', ['.B3 .middle .title', '.B3 .middle .infofromsides']);
+  panelMaker.newPanel("p r o g r a m m i n g", "Programming serves as a key part of the FTC competition, making our robot move based on the controller and also sensors. Our four programmers help develop Java code for Autonomous and TeleOp, bringing us up on top. We practice together, discussing issues and testing prototypes of our programs. In the end, we aim to build a great program to perform our best.", ".A2", ".leftside");
 
   //all the configs
   $('.A2 .rightside .images .imgtopleft').click(function() {
+    panelMaker.textTyped.destroy();
     panelMaker.newPanel("j o s h u a", "", ".A2", ".leftside");
   });
   $('.A2 .rightside .images .imgtopright').click(function() {
-    panelMaker.newPanel("n a t h a n", "", ".A2", ".leftside");
+    panelMaker.textTyped.destroy();
+    panelMaker.newPanel("c h a n d r a r k", "", ".A2", ".leftside");
   });
   $('.A2 .rightside .images .imgbottomleft').click(function() {
+    panelMaker.textTyped.destroy();
     panelMaker.newPanel("e r i c", "", ".A2", ".leftside");
   });
   $('.A2 .rightside .images .imgbottomright').click(function() {
-    panelMaker.newPanel("d a n i e l", "", ".A2", ".leftside");
+    panelMaker.textTyped.destroy();
+    panelMaker.newPanel("d a n i e l", "As Captain of Multimedia, Daniel programs our website in addition to the robot. He created the current website, and also created time-based autonomous programs for the competition. He enjoys learning new programming languages, playing basketball, and listening in on bitcoin.", ".A2", ".leftside");
   });
   $('.A2 .rightside .images .imgbottommiddle').click(function() {
-    panelMaker.newPanel("p r o g r a m m i n g", "", ".A2", ".leftside");
+    panelMaker.textTyped.destroy();
+    panelMaker.newPanel("p r o g r a m m i n g", "Programming serves as a key part of the FTC competition, making our robot move based on the controller and also sensors. Our four programmers help develop Java code for Autonomous and TeleOp, bringing us up on top. We practice together, discussing issues and testing prototypes of our programs. In the end, we aim to build a great program to perform our best.", ".A2", ".leftside");
   });
 
   $('.A3 .leftside .images .imgbottomright').click(function() {
@@ -45,22 +51,22 @@ $(window).on("load", function() {
   });
 
   $('.A4 .rightside .images .imgbottomright').click(function() {
-    panelMaker.newPanel("e v a n", "", ".A4", ".leftside");
+    panelMaker.newPanel("e v a n", "Evan is the head of Financing for our team, serving as the UCTA for Wolf Corp. He manages our balances and regularly inputs spendings and raised money. Evan also contributes to building the robot to give an extra hand. He works with Google Sheets and lots of numbers. Evan enjoys gaming, playing basketball, and practicing piano.", ".A4", ".leftside");
   });
   $('.A4 .rightside .images .imgbottomleft').click(function() {
-    panelMaker.newPanel("s a r a h", "", ".A4", ".leftside");
+    panelMaker.newPanel("s a r a h", "Sarah controls the Engineering Notebook, an important part of the . It keeps all the documents of our team, even what we have as snacks for each practice. Sarah also meets with businesses in person, asking for a funding to keep our team going. Sarah loves to listen to music, watch the newest movies, and hang out with friends.", ".A4", ".leftside");
   });
   $('.A4 .rightside .images .imgbottommiddle').click(function() {
     panelMaker.newPanel("b u s i n e s s", "", ".A4", ".leftside");
   });
   $('.A4 .rightside .images .imgtopleft').click(function() {
-    panelMaker.newPanel("j a s o n", "", ".A4", ".leftside");
+    panelMaker.newPanel("j a s o n", "Jason works on the Engineering Section for our team, drives the robot during the competition, and helps build and maintain the robot. In the Engineering Section, Jason includes the robot’s mechanisms and functionalities. When he’s not doing robotics, he plays games, dragonboats, and practices the handbell.", ".A4", ".leftside");
   });
   $('.A4 .rightside .images .imgtopright').click(function() {
-    panelMaker.newPanel("c o n o r", "", ".A4", ".leftside");
+    panelMaker.newPanel("c o n o r", "Conor oversees Documentation for our team. He ensures that anything from fundraising to Autonomous runs is recorded down, either on paper or online. Conor also keeps check on the robot, making sure it’s not broken or fixing it when it is. In his free time, Conor reads, sleeps, and plays with his dog Tara.", ".A4", ".leftside");
   });
   $('.A4 .rightside .images .imgtopmiddle').click(function() {
-    panelMaker.newPanel("c h a n d r a r k", "", ".A4", ".leftside");
+    panelMaker.newPanel("n a t h a n", "Nathan is the Business leader for Wolf Corp and supervises all main operations in the category. He reaches out to businesses as a part of that, looking for some to support our team. Besides that, he is also a builder, scouter, and outreach documenter. Nathan likes to play PC games, swim, listen to music, and practice the piano.", ".A4", ".leftside");
   });
 
   $('.A5 .botside .images .imgfarleft').click(function() {
@@ -202,7 +208,6 @@ $(window).on("load", function() {
 
 let dropdownleftopen = false;
 let dropdownrightopen = false;
-
 //classes for dream makers, life taker
 
 class panelAndDefaults {
@@ -211,16 +216,22 @@ class panelAndDefaults {
     this.titleString = '';
     this.textOptions = {
       strings: [" ", this.textString],
-      typeSpeed: 40,
-      backSpeed: 5,
-      showCursor: false
-    }
+      typeSpeed: 5,
+      backSpeed: 0.1,
+      showCursor: false,
+    };
     this.titleOptions = {
       strings: [" ", this.titleString],
       typeSpeed: 30,
       backSpeed: 15,
-      showCursor: false
-    }
+      showCursor: false,
+      onComplete: (self) => {
+        this.picChose = false;
+      }
+    };
+    this.titleTyped;
+    this.textTyped;
+    this.picChose = false;
   }
 
   newPanel(titleString, textString, panel, side) {
@@ -229,8 +240,12 @@ class panelAndDefaults {
     this.textOptions.strings[1] = textString;
     $('.line').hide();
     setTimeout(() => {$('.line').show()}, 1000);
-    let titleTyped = new Typed(`${panel} ${side} .title`, this.titleOptions);
-    let textTyped = new Typed(`${panel} ${side} .maintext`, this.textOptions);
+    if (!this.picChose) {
+      this.titleTyped = new Typed(`${panel} ${side} .title`, this.titleOptions);
+      this.textTyped = new Typed(`${panel} ${side} .maintext`, this.textOptions);
+      this.textTyped.start();
+      this.picChose = true;
+    }
   }
 }
 

@@ -1,3 +1,4 @@
+window.location.href = "http://wolf-corp.github.io/12525";
 $('.back').hide();
 $('.forward').hide();
 $('.up').hide();
@@ -9,7 +10,6 @@ var loading_screen = pleaseWait({
 });
 var currslide = 0;
 $(window).on("load", function() {
-  window.location.href = "http://wolf-corp.github.io/12525";
   // removes loading screen
   loading_screen.finish();
 
